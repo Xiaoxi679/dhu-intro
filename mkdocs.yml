@@ -1,26 +1,16 @@
-site_name: My Docs
-site_url: https://example.com
+site_name: My MkDocs Material Documentation
+site_url: https://sitename.example
 theme:
-  features:
-    - navigation.footer
-
+  name: material
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-
-  name: material
-
   icon:
     logo: fontawesome/solid/d
-
+  features:
+    - navigation.footer
+    
   palette:
-    # Dark Mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: green
-      accent: deep purple
 
     # Light Mode
     - scheme: default
@@ -30,12 +20,19 @@ theme:
       primary: blue
       accent: deep orange
 
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -56,7 +53,5 @@ extra:
   social:
     - icon: simple/youtube
       link: https://youtube.com/@james-willett
-    - icon: simple/linkedin
-      link: https://linkedin.com/in/willettjames
 
 copyright: Copyright &copy; 2024 James Willett
