@@ -1,32 +1,73 @@
-site_name: My MkDocs Material Documentation
-site_url: https://sitename.example
+site_name: DHU Intro
+site_url: https://xiaoxi679.github.io/dhu-intro/
+repo_name: Xiaoxi679/dhu-intro
+repo_url: https://github.com/Xiaoxi679/dhu-intro
 theme:
+
+  language: zh
+  
   name: material
+
   font:
     text: Merriweather Sans
     code: Red Hat Mono
+
   icon:
     logo: fontawesome/solid/d
+    repo: fontawesome/brands/git-alt
+
   features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
     - navigation.footer
-    
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+
   palette:
 
-    # Light Mode
-    - scheme: default
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/weather-night
-        name: Light mode
-      primary: blue
-      accent: deep orange
+        icon: material/brightness-auto
+        name: Switch to light mode
 
-    # Dark Mode
-    - scheme: slate
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+
+
       toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: green
-      accent: deep purple
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
 markdown_extensions:
   - attr_list
@@ -53,5 +94,7 @@ extra:
   social:
     - icon: simple/youtube
       link: https://youtube.com/@james-willett
+  version:
+    provider: mike
 
 copyright: Copyright &copy; 2024 James Willett
