@@ -13,9 +13,9 @@
 - 建议加入新生群，关注相关通知。
  
 ### > 校园地图
-![地图](\Pic\map\songjiang-official.jpg)
-![地图](\Pic\map\songjiang-yiban.jpg)
-![地图](\Pic\map\yanan-yiban.jpg)
+![地图](\docs\Pic\map\songjiang-official.jpg)
+![地图](\docs\Pic\map\songjiang-yiban.jpg)
+![地图](\docs\Pic\map\yanan-yiban.jpg)
 
 ### > 建议带什么东西
 #### > 【证件资料清单】

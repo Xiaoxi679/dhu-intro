@@ -49,7 +49,7 @@
 
 东华大学女足招新，先前因经营不善解散，现在五人制场地重建，有场地支持后开始重建校园组女足，比较缺人，想要参加女足的可以加一下QQ群，联系群主进入女足群。
 
-![宣传图](\Pic\club\football.jpg){width=50%}
+![宣传图](\docs\Pic\club\football.jpg){width=50%}
 
 ### Fire-step步之火舞街舞社
 ### Firestep街舞社（延安路）
@@ -80,7 +80,7 @@
 ### 数学建模协会
 
 ### NUEDC创新协会
-![宣传图](\Pic\club\NUEDC.png){width=50%}
+![宣传图](\docs\Pic\club\NUEDC.png){width=50%}
 
 ### 朋辈心理发展联盟
 ### 平行界科幻协会
@@ -111,15 +111,15 @@
 ### 云武跆拳道社
 ### 游泳社
 ### 翼想乡动漫社
-![宣传图](\Pic\Yixiangxiang.jpg){width=50%}
+![宣传图](\docs\Pic\Yixiangxiang.jpg){width=50%}
 
 
 ## 民间同好会
 ### GalGame研究室
-![宣传图](\Pic\club\GalGame.jpg){width=50%}
+![宣传图](\docs\Pic\club\GalGame.jpg){width=50%}
 
 ### 术力口电台
-![宣传图](\Pic\club\Shulikou.jpg){width=50%}
+![宣传图](\docs\Pic\club\Shulikou.jpg){width=50%}
 
 ### 战争雷霆学院
-![宣传图](\Pic\club\Zhanzhengleiting.png){width=50%}
+![宣传图](\docs\Pic\club\Zhanzhengleiting.png){width=50%}
