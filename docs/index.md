@@ -11,11 +11,15 @@
 
 询问更多DHU相关信息请加入[东华大学2025级官方新生1群(QQ群)](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=pbyfAD0-RifE66lMEMBw0PlLZGHb6Wgj&authKey=t3h8XSYIr6LDwrONlgCiKAo%2FqRSGuZlPhHL7i%2BUsin4ok3EfYVgfNIyOgwxwtTdG&noverify=0&group_code=1053396423)
 
+1. 对于没有Git使用背景的大部分同学：请将编辑好的`.md`文件发送到**joylemon AT zhouzanxi.com**，咱会帮助你上架。
+   
+2. 对于熟悉Git操作的同学：请对[`docs`](https://github.com/Xiaoxi679/dhu-intro/tree/main/docs)路径下的对应文件夹Pull Request，可参考 ['docs']文件夹下的文件，Merge后便即时上线。请注意文件名请全部使用英文并符合之前的模板，不允许有空格，请使用-代替空格。（苯仁也是github初体验蒽）
+   
+3. 如需更新内容，请及时联系咱ο(=•ω＜=)ρ⌒☆！
+
 # 免责声明
 
 本站内容来源于网络和他人解答，由于回复的准确性无法保证，请您仅将本站内容作为参考，并结合其他来源的资料进行分析。
-
-由于部分数据提交时未规范填写校名，以及数据处理脚本可能存在缺陷，部分国内高校可能未被准确分类到省市目录中，敬请谅解。
 
 # mkdocs操作指南
 

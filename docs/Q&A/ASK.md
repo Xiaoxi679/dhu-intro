@@ -1,6 +1,6 @@
-> 本文受启发于[认识信息素养（By Yikai Yang）](https://survivesjtu.gitbook.io/survivesjtumanual/li-zhi-pian/ren-shi-xin-xi-su-yang)，结合DHU进行了部分改编，小编认为这是进入大学之前非常重要的一环
-
 # 【在Q&A之前】认识信息素养
+
+> 本文受启发于[认识信息素养（By Yikai Yang）](https://survivesjtu.gitbook.io/survivesjtumanual/li-zhi-pian/ren-shi-xin-xi-su-yang)，结合DHU进行了部分改编，小编认为这是进入大学之前非常重要的一环
 
 信息素养包括信息的查找与获取、理解与吸收、评价、使用、加工、呈现、信息安全等。DHU也开设过“信息检索”相关的课程，但在进入大学之前，你也应当需要掌握一些基础信息的收集能力。
 
