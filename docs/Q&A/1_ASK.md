@@ -1,6 +1,15 @@
+---
+comments: true
+---
+
 # 【在Q&A之前】认识信息素养
 
-> 本文受启发于[认识信息素养（By Yikai Yang）](https://survivesjtu.gitbook.io/survivesjtumanual/li-zhi-pian/ren-shi-xin-xi-su-yang)，结合DHU进行了部分改编，小编认为这是进入大学之前非常重要的一环
+> 本文受启发于[认识信息素养（By Yikai Yang）](https://survivesjtu.gitbook.io/survivesjtumanual/li-zhi-pian/ren-shi-xin-xi-su-yang)与上交的新生问答，结合DHU进行了部分改编，小编认为这是进入大学之前非常重要的一环
+
+ - 在比较正式的情形下提问的时候，请注意提问的智慧，具体内容参考以下链接：[《提问的智慧》（中文版）](https://github.com/tvvocold/How-To-Ask-Questions-The-Smart-Way)，或者参考以下B站视频：[【都成年了，要学会提问了】](https://www.bilibili.com/video/BV1om4y1H71S/)，学会正确的提问方式，能大大帮助你准确而优雅地获得相对良好的提问观感。
+ - 大学期间最重要的能力之一是信息搜寻与检索，但是，与此同时，信息的筛选与分辨重要程度与之相当。笔者希望你们在搜集到很多信息之后，能够反思并且归纳，明辨其中适合于自己的内容，予以吸收并实践。
+ - 网络信息纷杂，请在上网冲浪的同时，对任何信息都保持警惕，不要轻易相信；同时，网络不是法外之地，请规范自身言行，以免招致不必要的麻烦。
+
 
 信息素养包括信息的查找与获取、理解与吸收、评价、使用、加工、呈现、信息安全等。DHU也开设过“信息检索”相关的课程，但在进入大学之前，你也应当需要掌握一些基础信息的收集能力。
 

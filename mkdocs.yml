@@ -8,6 +8,8 @@ theme:
   
   name: material
 
+  custom_dir: overrides
+
   font:
     text: Merriweather Sans
     code: Red Hat Mono
