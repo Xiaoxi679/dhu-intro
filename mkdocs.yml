@@ -1,4 +1,4 @@
-site_name: DHU 指北
+site_name: DHU Intro
 site_description: 东华大学指北 — 帮助你快速了解校园生活、社团组织与学业信息
 site_url: https://xiaoxi679.github.io/dhu-intro/
 repo_name: Xiaoxi679/dhu-intro
@@ -132,4 +132,4 @@ extra:
   version:
     provider: mike
 
-copyright: Copyright &copy; 2025 DHU 指北 贡献者
+copyright: Copyright &copy; 2025 DHU Intro 贡献者
