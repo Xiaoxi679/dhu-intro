@@ -70,7 +70,7 @@ mkdocs gh-deploy
 
 > 欢迎所有形式的贡献！
 
-- **没有 Git 经验**：将编辑好的 `.md` 文件发送到 **joylemon AT zhouzanxi.com**
+- **没有 Git 经验**：在 [Discussions Ideas](https://github.com/Xiaoxi679/dhu-intro/discussions/categories/ideas) 提出你的想法！咱会帮助你上架
 - **有 Git 经验**：对 `docs/` 下的文件 Pull Request，Merge 后即时上线
 - **文件名**：请使用英文，不允许空格，用 `-` 代替
 - **讨论**：前往 [Discussions](https://github.com/Xiaoxi679/dhu-intro/discussions)
