@@ -4,13 +4,16 @@ comments: true
 
 # 校园设施与服务
 
+### > 校园地图
+![地图](../Pic/map/songjiang-official.jpg?raw=true)
+![地图](../Pic/map/songjiang-yiban.jpg?raw=true)
+![地图](../Pic/map/yanan-yiban.jpg?raw=true)
+
 ## 主要建筑概览
 
 ### 图文信息中心
 
 东华大学标志性建筑，包含学校**图书馆**、机房、会议室、报告厅等。电梯旁有引导牌，不用担心找不到。
-
-![校园地图](../Pic/map/songjiang-yiban.jpg)
 
 ### 体育馆与操场
 
