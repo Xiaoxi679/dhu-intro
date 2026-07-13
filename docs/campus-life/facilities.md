@@ -5,9 +5,9 @@ comments: true
 # 校园设施与服务
 
 ### > 校园地图
-![地图](../Pic/map/songjiang-official.jpg?raw=true)
-![地图](../Pic/map/songjiang-yiban.jpg?raw=true)
-![地图](../Pic/map/yanan-yiban.jpg?raw=true)
+![地图](https://xiaoxi679.github.io/dhu-intro/Pic/map/songjiang-official.jpg?raw=true)
+![地图](https://xiaoxi679.github.io/dhu-intro/Pic/map/songjiang-yiban.jpg?raw=true)
+![地图](https://xiaoxi679.github.io/dhu-intro/Pic/map/yanan-yiban.jpg?raw=true)
 
 ## 主要建筑概览
 
