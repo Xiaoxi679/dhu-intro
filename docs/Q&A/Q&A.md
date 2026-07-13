@@ -5,7 +5,7 @@ comments: true
 # 开学之前的疑问
 
 ## 问答板块
-[(搭建中)新生问答板块](https://docs.qq.com/doc/DYWNYTExaU3dqTWFr)
+[(~~并没有在搭建~~)新生问答板块](https://docs.qq.com/doc/DYWNYTExaU3dqTWFr)
 
 ## 如何快速查找我需要的信息？
 - 使用全文大纲
