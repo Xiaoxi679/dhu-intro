@@ -1,0 +1,27 @@
+/* ============================================
+   DHU Intro - 东华大学品牌配色
+   主色 #C41230 (东华红，参考官方标识系统标准色)，
+   强调色 #004d8c (东华蓝)
+   首页配色请勿修改 — 由 overrides/main.html 独立控制
+   ============================================ */
+
+/* 浅色模式 — 东华红为主色 */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #c41230;
+  --md-primary-fg-color--light: #d64550;
+  --md-primary-fg-color--dark:  #9a0e24;
+  --md-accent-fg-color:         #004d8c;
+}
+
+/* 深色模式 */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #d64550;
+  --md-primary-fg-color--light: #e06670;
+  --md-primary-fg-color--dark:  #9a0e24;
+  --md-accent-fg-color:         #5ba3d9;
+}
+
+/* 代码块字体 */
+:root {
+  --md-code-font: "JetBrains Mono", "Cascadia Code", "Fira Code", Consolas, monospace;
+}

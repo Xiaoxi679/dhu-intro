@@ -1,7 +1,35 @@
 site_name: DHU Intro
+site_description: 东华大学新生指南 — 帮助你快速了解校园生活、社团组织与学业信息
 site_url: https://xiaoxi679.github.io/dhu-intro/
 repo_name: Xiaoxi679/dhu-intro
 repo_url: https://github.com/Xiaoxi679/dhu-intro
+
+nav:
+  - 首页: index.md
+  - 开学准备:
+    - 开学前疑问: Q&A/Q&A.md
+    - 认识信息素养: Q&A/1_ASK.md
+    - 常用资源汇总: campus-life/facilities.md
+    - 转专业政策: Q&A/choose.md
+  - 校园生活:
+    - 食堂与饮食: campus-life/canteen.md
+    - 宿舍生活: campus-life/dormitory.md
+    - 校园设施与服务: campus-life/facilities.md
+  - 学习指南:
+    - 选课与绩点: academic/course-selection.md
+    - 学习资源: academic/resources.md
+  - 交通出行: transportation.md
+  - 身心健康: health.md
+  - 社团与组织:
+    - 学生社团: club/club.md
+    - 民间同好会: club/fan-club.md
+    - 学生组织: committee/committee.md
+  - 家乡群: gohome/gohome.md
+  - 未来规划: future.md
+  - 电脑选购: computer.md
+  - 避坑指南: pitfall.md
+  - 感谢: acknowledgements.md
+
 theme:
 
   language: zh
@@ -11,8 +39,8 @@ theme:
   custom_dir: overrides
 
   font:
-    text: Merriweather Sans
-    code: Red Hat Mono
+    text: Noto Sans SC
+    code: JetBrains Mono
 
   icon:
     logo: fontawesome/solid/d
@@ -24,28 +52,21 @@ theme:
     - content.action.view
     - content.code.annotate
     - content.code.copy
-    # - content.code.select
-    # - content.footnote.tooltips
-    # - content.tabs.link
+    - content.tabs.link
     - content.tooltips
-    # - header.autohide
-    # - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.prune
+    - navigation.instant
+    - navigation.instant.progress
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
-    # - toc.integrate
 
   palette:
 
@@ -73,6 +94,11 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - def_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -89,14 +115,21 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-  - admonition
-  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   social:
-    - icon: simple/youtube
-      link: https://youtube.com/@james-willett
+    - icon: fontawesome/brands/github
+      link: https://github.com/Xiaoxi679/dhu-intro
   version:
     provider: mike
 
-copyright: Copyright &copy; 2024 James Willett
+copyright: Copyright &copy; 2025 DHU Intro 贡献者

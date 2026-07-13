@@ -1,0 +1,181 @@
+{#-
+  main.html — homepage override.
+  Header & tabs: transparent on homepage, default indigo elsewhere.
+  Hero: campus image fills viewport behind transparent nav, text at bottom-left.
+  Sections below on normal white/light backgrounds.
+-#}
+{% extends "base.html" %}
+
+{% block tabs %}
+  {{ super() }}
+
+  {% if page.is_homepage %}
+  <style>
+    /* === Hide default content on homepage (NOT .md-main — drawer lives inside it on mobile!) === */
+    .md-content{display:none!important}
+    @media(min-width:60em){.md-sidebar--secondary{display:none!important}}
+    @media(min-width:76.25em){.md-sidebar--primary{display:none!important}}
+
+    /* === Transparent header & tabs — unified as one bar === */
+    /* Header: the only element with background+blur.
+       Tabs: fully transparent, sits right below header, visually merges. */
+    .md-header{background:rgba(0,0,0,.4)!important;background-color:rgba(0,0,0,.4)!important;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:none!important;border:none!important;color:#fff!important;--md-primary-fg-color:transparent;--md-primary-fg-color--light:transparent;--md-primary-fg-color--dark:transparent;--md-accent-fg-color:transparent}
+    .md-header__inner{background:transparent!important;box-shadow:none!important;border:none!important}
+    .md-header__topic,.md-header__title,.md-header__source,.md-header .md-icon,.md-header .md-search__input,.md-header .md-search__input::placeholder{color:#fff!important}
+    .md-header .md-search__input{background:rgba(255,255,255,.15)!important;border-radius:4px;border:none!important}
+    .md-header svg,.md-header svg path,.md-header svg circle,.md-header svg rect{fill:#fff!important}
+
+    /* Tabs: NO background, NO blur — inherit nothing. Header's blur shows through. */
+    .md-tabs{background:transparent!important;background-color:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border:none!important;box-shadow:none!important;--md-primary-fg-color:transparent;--md-primary-fg-color--light:transparent;--md-primary-fg-color--dark:transparent}
+    .md-tabs__inner{background:transparent!important;border:none!important}
+    .md-tabs__item,.md-tabs__item--active{background:transparent!important}
+    .md-tabs__link{color:rgba(255,255,255,.85)!important;opacity:1!important;font-weight:500}
+    .md-tabs__item--active .md-tabs__link{color:#fff!important;font-weight:700}
+    .md-tabs__link:hover{color:#fff!important}
+
+    /* === Flush container — no gap between tabs and hero === */
+    .md-container{padding-top:0!important}
+
+    /* === Ensure drawer sidebar and overlay are above hero === */
+    .md-sidebar--primary{z-index:20!important}
+    .md-overlay{z-index:19!important}
+    [data-md-toggle=drawer]:checked ~ .md-container .md-sidebar--primary{transform:translateX(12.1rem)!important}
+
+    /* === Hero section === */
+    /* Height = 100vh. Pull up by 128px to sit behind header(64px)+tabs(64px).
+       Add 128px padding-top so content stays in the right place.
+       box-sizing keeps total height at exactly 100vh. */
+    .dhu-hero{
+      display:flex;align-items:flex-end;justify-content:flex-start;
+      margin-top:-128px;
+      padding-top:128px;
+      min-height:100vh;
+      box-sizing:border-box;
+      position:relative;
+      overflow:hidden;
+      background:url('{{ 'Pic/hero/1.jpg' | url }}') center/cover no-repeat
+    }
+    /* Dark gradient overlay for text readability */
+    .dhu-hero::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,.4) 0%,rgba(0,0,0,.15) 35%,rgba(0,0,0,.45) 65%,rgba(0,0,0,.75) 100%)
+    }
+    /* Hero text */
+    .dhu-hero__content{position:relative;z-index:1;padding:3rem 2.5rem 3.5rem;max-width:800px}
+    .dhu-hero__content h1{font-size:3rem;font-weight:800;color:#fff;margin-bottom:.6rem;text-shadow:0 2px 16px rgba(0,0,0,.5);letter-spacing:.03em;line-height:1.2}
+    .dhu-hero__content p{font-size:1.15rem;color:rgba(255,255,255,.85);margin-bottom:1.5rem;line-height:1.6;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+    /* Buttons */
+    .dhu-hero__actions{display:flex;gap:.8rem;flex-wrap:wrap}
+    .dhu-hero__actions .md-button{padding:.7rem 2rem;font-size:.95rem;font-weight:600;border-radius:999px;transition:all .25s}
+    .dhu-hero__actions .md-button--primary{background:#fff;color:#1565c0;border-color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+    .dhu-hero__actions .md-button--primary:hover{background:#e3f2fd;transform:translateY(-2px);box-shadow:0 6px 28px rgba(0,0,0,.4)}
+    .dhu-hero__actions .md-button{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+    .dhu-hero__actions .md-button:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-2px)}
+
+    /* === Content sections === */
+    .dhu-section{padding:2.5rem 1rem;background:var(--md-default-bg-color)}
+    .dhu-section--light{background:var(--md-default-fg-color--lightest)}
+    .dhu-section__title{text-align:center;margin-bottom:1.5rem}
+
+    /* Cards */
+    .dhu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:1.5rem}
+    .dhu-card{display:flex;flex-direction:column;padding:1.4rem 1.3rem;border-radius:10px;border:1px solid var(--md-default-fg-color--lightest);background:var(--md-default-bg-color);transition:transform .2s,box-shadow .2s,border-color .2s;text-decoration:none;color:inherit}
+    .dhu-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.1);border-color:var(--md-primary-fg-color);text-decoration:none;color:inherit}
+    .dhu-card__icon{font-size:1.8rem;margin-bottom:.6rem}
+    .dhu-card__title{font-size:1.05rem;font-weight:700;margin-bottom:.3rem}
+    .dhu-card__desc{font-size:.82rem;color:var(--md-default-fg-color--light);line-height:1.45}
+
+    /* Gallery */
+    .dhu-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:.5rem 0 1rem}
+    .dhu-gallery img{width:100%;border-radius:10px;aspect-ratio:16/10;object-fit:cover;transition:transform .25s ease;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+    .dhu-gallery img:hover{transform:scale(1.03);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+
+    /* Footer link */
+    .dhu-footer-link{text-align:center;padding:1.5rem 0;font-size:.85rem;background:var(--md-default-bg-color)}
+    .dhu-footer-link svg{height:1em;vertical-align:middle;margin-right:.2em}
+
+    /* === Responsive === */
+    @media(max-width:960px){
+      .dhu-hero__content{padding:2rem 1.5rem 2.5rem;max-width:520px}
+      .dhu-hero__content h1{font-size:2.2rem}
+    }
+    @media(max-width:600px){
+      .dhu-hero{margin-top:-96px;padding-top:96px}
+      .dhu-hero__content h1{font-size:1.8rem}
+      .dhu-hero__content{max-width:100%}
+      .dhu-hero{min-height:80vh}
+      .dhu-grid{grid-template-columns:1fr}
+      .dhu-gallery{grid-template-columns:1fr}
+    }
+  </style>
+
+  <section class="dhu-hero">
+    <div class="dhu-hero__content">
+      <h1>东华大学新生指南</h1>
+      <p>{{ config.site_description }}</p>
+      <div class="dhu-hero__actions">
+        <a href="{{ page.next_page.url | url }}" class="md-button md-button--primary">开始探索</a>
+        <a href="{{ config.repo_url }}" class="md-button">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dhu-section dhu-section--light">
+    <div class="md-grid md-typeset">
+      <h2 class="dhu-section__title">快速导航</h2>
+      <div class="dhu-grid">
+        <a href="Q&A/Q&A/" class="dhu-card"><span class="dhu-card__icon">🚀</span><span class="dhu-card__title">开学准备</span><span class="dhu-card__desc">开学前疑问、信息素养指南、常用资源汇总、转专业政策</span></a>
+        <a href="campus-life/canteen/" class="dhu-card"><span class="dhu-card__icon">🏫</span><span class="dhu-card__title">校园生活</span><span class="dhu-card__desc">食堂美食、宿舍生活、校园设施、常用网站导航</span></a>
+        <a href="academic/course-selection/" class="dhu-card"><span class="dhu-card__icon">📖</span><span class="dhu-card__title">学习指南</span><span class="dhu-card__desc">选课与绩点、自习场所、学习资源</span></a>
+        <a href="transportation/" class="dhu-card"><span class="dhu-card__icon">🚇</span><span class="dhu-card__title">交通出行</span><span class="dhu-card__desc">如何到达学校、两校区往返、周边公共交通</span></a>
+        <a href="health/" class="dhu-card"><span class="dhu-card__icon">💚</span><span class="dhu-card__title">身心健康</span><span class="dhu-card__desc">校医院服务、心理咨询、体育锻炼</span></a>
+        <a href="club/club/" class="dhu-card"><span class="dhu-card__icon">👥</span><span class="dhu-card__title">社团与组织</span><span class="dhu-card__desc">学生社团、民间同好会、学生会与团委</span></a>
+        <a href="gohome/gohome/" class="dhu-card"><span class="dhu-card__icon">🏠</span><span class="dhu-card__title">家乡群</span><span class="dhu-card__desc">各省份/地区东华老乡群联系方式</span></a>
+        <a href="future/" class="dhu-card"><span class="dhu-card__icon">🧭</span><span class="dhu-card__title">未来规划</span><span class="dhu-card__desc">保研、考研、留学、就业、考插——五大出路概览</span></a>
+        <a href="computer/" class="dhu-card"><span class="dhu-card__icon">💻</span><span class="dhu-card__title">电脑选购</span><span class="dhu-card__desc">不同专业怎么选电脑？笔记本/台式/平板推荐</span></a>
+        <a href="pitfall/" class="dhu-card"><span class="dhu-card__icon">🛡️</span><span class="dhu-card__title">避坑指南</span><span class="dhu-card__desc">开学常见骗局、推销陷阱、校园安全提醒</span></a>
+        <a href="https://github.com/Xiaoxi679/dhu-intro/discussions" class="dhu-card"><span class="dhu-card__icon">🤝</span><span class="dhu-card__title">参与贡献</span><span class="dhu-card__desc">如何帮助完善本站，让信息更全面</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dhu-section">
+    <div class="md-grid md-typeset">
+      <h2 class="dhu-section__title">东华掠影</h2>
+      <div class="dhu-gallery">
+        <img src="{{ 'Pic/hero/2.jpg' | url }}" alt="东华大学风景" loading="lazy">
+        <img src="{{ 'Pic/hero/3.jpg' | url }}" alt="东华大学风景" loading="lazy">
+        <img src="{{ 'Pic/hero/1.jpg' | url }}" alt="东华大学风景" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="dhu-section dhu-section--light">
+    <div class="md-grid md-typeset">
+      <h2>这是什么项目？</h2>
+      <p>这是一个由受"新生事项"、<a href="https://github.com/CollegesChat/">《大学生活质量指北》</a>、《上交生存手册》启发的常见资料汇总项目，意在帮助新生们大概了解东华大学(DHU)，同时了解社团、学生组织等方面的信息。</p>
+      <h3>查询 &amp; 贡献 &amp; 提问</h3>
+      <p>您可以直接在本站查询问卷收集到的DHU相关资料。贡献、提问、部分资料查询请前往 <a href="https://github.com/Xiaoxi679/dhu-intro/discussions">Discussions</a>。</p>
+      <p>询问更多DHU相关信息请加入 <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&amp;k=pbyfAD0-RifE66lMEMBw0PlLZGHb6Wgj&amp;authKey=t3h8XSYIr6LDwrONlgCiKAo%2FqRSGuZlPhHL7i%2BUsin4ok3EfYVgfNIyOgwxwtTdG&amp;noverify=0&amp;group_code=1053396423">东华大学2025级官方新生1群（QQ群）</a>。</p>
+      <ol>
+        <li>对于没有 Git 使用背景的同学们：请在 <a href="https://github.com/Xiaoxi679/dhu-intro/discussions/categories/ideas">Discussions Ideas</a> 提出你的想法！咱会帮助你上架。</li>
+        <li>对于熟悉 Git 操作的同学：请对 <a href="https://github.com/Xiaoxi679/dhu-intro/tree/main/docs"><code>docs</code></a> 路径下的对应文件夹 Pull Request，Merge 后便即时上线。文件名请全部使用英文，不允许有空格，请使用 <code>-</code> 代替空格。</li>
+        <li>如需更新内容，请及时联系咱 ο(=•ω＜=)ρ⌒☆！</li>
+      </ol>
+      <h3>免责声明</h3>
+      <p>本站内容来源于网络和他人解答，由于回复的准确性无法保证，请您仅将本站内容作为参考，并结合其他来源的资料进行分析。</p>
+    </div>
+  </section>
+
+  <div class="dhu-footer-link">
+    <a href="{{ config.repo_url }}">{% include ".icons/fontawesome/brands/github.svg" %} 在 GitHub 上查看本项目</a>
+  </div>
+
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% if not page.is_homepage %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}

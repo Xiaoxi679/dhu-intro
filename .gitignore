@@ -120,6 +120,12 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# ZCode
+.zcode/
+
+# Reference materials (local only)
+参考：我们学校之前的和别的学校的/
+
 # mypy
 .mypy_cache/
 .dmypy.json
