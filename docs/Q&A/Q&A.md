@@ -20,9 +20,9 @@ comments: true
 - 建议加入新生群，关注相关通知。
  
 ### > 校园地图
-![地图](https://github.com/Xiaoxi679/dhu-intro/blob/main/docs/Pic/map/songjiang-official.jpg?raw=true)
-![地图](https://github.com/Xiaoxi679/dhu-intro/blob/main/docs/Pic/map/songjiang-yiban.jpg?raw=true)
-![地图](https://github.com/Xiaoxi679/dhu-intro/blob/main/docs/Pic/map/yanan-yiban.jpg?raw=true)
+![地图](https://xiaoxi679.github.io/dhu-intro/Pic/map/songjiang-official.jpg?raw=true)
+![地图](https://xiaoxi679.github.io/dhu-intro/Pic/map/songjiang-yiban.jpg?raw=true)
+![地图](https://xiaoxi679.github.io/dhu-intro/Pic/map/yanan-yiban.jpg?raw=true)
 
 ### > 建议带什么东西
 #### > 【证件资料清单】
